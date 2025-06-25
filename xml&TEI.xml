@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sas-nurras">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Sas nurras</title>
+        <author>Grazia Deledda</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>Pubblicato in "Fiabe e racconti", 1924. Rieditato digitalmente a scopo didattico.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <author>Grazia Deledda</author>, 
+          <title>Fiabe e racconti</title>, 
+          <date when="1924">1924</date>.
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <div type="racconto">
+        <head>Sas nurras</head>
+        <p>
+          Nei monti di <placeName>Oliena</placeName>, nei contrafforti calcarei dai picchi acuti di un azzurro latteo che si confonde col cielo, esistono grandi crepacci – ricordi di antichissime convulsioni vulcaniche – di alcuni dei quali non si distingue il fondo.
+          Vengono chiamati <foreign xml:lang="srd">sas nurras</foreign>, e volgarmente si crede che siano misteriose comunicazioni dell’<name type="myth">inferno</name> col mondo.
+          Di là escono i <name type="myth">diavoli</name> per scorrazzare sulle bianche montagne in cerca di anime e di avventure.
+          Fra le altre leggende riguardanti le <foreign xml:lang="srd">nurras</foreign> ho trovato questa, molto bizzarra, e, pare, non molto antica.
+        </p>
+      </div>
+    </body>
+  </text>
+</TEI>
+
