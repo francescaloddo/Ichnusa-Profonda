@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title> pagina catalogo </title>
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+background-color: #FFFCE1;
+color: #FFFCE1;
+font-size: 16px;
+font-family: 'Times New Roman', serif;
+text-align: center;
+background-image: url("immagini/sfondoipotetico.png");
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center; 
+}
+
+header {
+background-color: #FFFCE1;
+padding: 10px 16px;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+
+header img {
+max-width: 400px;
+height: auto;
+}
+
+.menu ul {
+list-style: none;
+padding: 0;
+margin: 0;
+background-color: #F5F352;
+}
+.menu ul li {
+position: relative;
+display: inline-block;
+}
+.menu ul li a {
+color: black;
+text-decoration: none;
+padding: 15px 20px;
+display: block;
+}
+.menu ul li .submenu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #FFFCE1;
+}
+
+.menu ul li .submenu li {
+display: block;
+}
+.menu ul li:hover .submenu {
+display: block;
+}
+
+	.titolo {
+	margin-top:60px;
+	margin-bottom: 60px;
+	font-size: 1.2em;
+	font-weight: bold;
+	}
+
+	h2 {
+	color: whitesmoke;
+}
+
+
+	.griglia {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 60px;
+max-width: 1200px;
+margin: auto;
+}
+
+.elemento {
+position: relative;
+width: 100%;
+max-width: 400px;
+margin: 0 auto;
+overflow: hidden;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elemento:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.elemento img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+object-position: center;
+transition: transform 0.3s ease;
+}
+
+.elemento:hover img {
+transform: scale(1.05);
+}
+
+.elemento .btn {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: linear-gradient(45deg, #555, #777);
+color: #FFFCE1;
+font-size: 16px;
+font-weight: bold;
+padding: 12px 24px;
+border: none;
+cursor: pointer;
+border-radius: 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+opacity: 0;
+transition: all 0.3s ease;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+backdrop-filter: blur(10px);
+background-color: rgba(85, 85, 85, 0.9);
+}
+
+.elemento:hover .btn {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1.1);
+}
+
+.elemento .btn:hover {
+background: linear-gradient(45deg, #333, #555);
+transform: translate(-50%, -50%) scale(1.2);
+box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.elemento .nome {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: linear-gradient(transparent, rgba(0,0,0,0.8));
+color: #FFFCE1;
+padding: 20px 10px 10px;
+font-weight: bold;
+font-size: 18px;
+}
+
+h2 {
+color: white;
+margin: 40px 0 30px 0;
+font-size: 2em;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+footer {
+background-color: #FFFCE1;
+padding: 20px;
+margin-top: 40px;
+}
+
+footer a {
+text-decoration: none;
+color: black;
+}
+
+footer p {
+text-decoration: none;
+color: black;
+}
+
+.copyright {
+font-size: 0.9em;
+margin-top: 10px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+<img src="immagini/Ichnusa.png" alt="logo iniziale">
+</header>
+
+<nav class="menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Sentieri</a>
+<ul class="submenu">
+<li><a href="#">Mare</a></li>
+<li><a href="#">Natura </a></li>
+<li><a href="#">Storia</a></li>
+<li><a href="#">Cucina</a></li>
+<li><a href="catalogo.html">Folklore</a></li>
+</ul>
+</li>
+<li><a href="catalogo.html">La nostra cultura</a></li>
+<li><a href="#">Chi Siamo</a></li>
+<li><a href="#">Contatti</a></li>
+<li><a href="item.html">Item</a></li>
+
+<input type="text" placeholder="Search..">
+</ul>
+</nav>
+
+<div class="titolo"> CONOSCERE IL FOLKLORE RELIGIOSO E PAGANO:
+FESTE, MITI E FAVOLE DELLA SARDEGNA </div>
+
+
+
+<h2> <a href="https://uploads.knightlab.com/storymapjs/7e8fa5400c8e57bc522191e3aff32ab5/ichnusa/draft.html"> Clicca qui per aprire la mappa interattiva </a>
+</h2>
+
+<h1> Opere da approfondire </h1>
+<div class="griglia">
+
+<div class="elemento">
+<img src="immagini/graziadeledda.png" alt="copertina deledda">
+<a href="item.html" class="btn">Scopri di più</a>
+<div class="nome">Grazia Deledda: "Fiabe e leggende"</div>
+</div>
+
+<div class="elemento">
+<img src="immagini/francofresi.jpeg" alt="copertina Fresi">
+<a href="#" class="btn">Scopri di più</a>
+<div class="nome">Franco Fresi: "La Sardegna dei misteri"</div>
+</div>
+
+<div class="elemento">
+<img src="immagini/cambosusalvatore.jpg" alt="copertina cambosu">
+<a href="#" class="btn">Scopri di più</a>
+<div class="nome">Salvatore Cambosu: "Racconti"</div>
+</div>
+</div>
+
+<h1> Feste a cui assistere e partecipare </h1>
+
+<div class="griglia">
+
+<div class="elemento">
+<img src="immagini/Santefisio.png" alt="ipotesi di video sant'efisio">
+<a href="https://www.youtube.com/live/YZ_cMohuitw?si=asEemSRDAvZBGIcs" class="btn">Guarda video</a>
+<div class="nome">Sant'Efisio</div>
+</div>
+
+<div class="elemento">
+<img src="immagini/isanimeddas.jpg" alt="ipotesi video bambini che vanno in giro">
+<a href="https://youtu.be/I9dnopQiQUU?si=uzRTR2lnJ3K0PtcI" class="btn">Guarda video</a>
+<div class="nome">Is Animeddas</div>
+</div>
+
+<div class="elemento">
+<img src="immagini/carnevalemamoiada.jpg" alt="ipotesi video sfilata carnevale">
+<a href="https://youtu.be/6hpvYmSrnW0?si=2XLtlsxpV0DCU8Uv" class="btn">Guarda video</a>
+<div class="nome">Carnevale di Mamoiada</div>
+</div>
+</div>
+
+<h1> Alcuni dei miti più famosi </h1>
+<div class="griglia">
+
+<div class="elemento">
+<img src="immagini/cogas.jpeg" alt="foto miti streghe">
+<a href="#" class="btn">Leggi di più</a>
+<div class="nome">Sas Cogas</div>
+</div>
+
+<div class="elemento">
+<img src="immagini/accabbadora.jpeg" alt="foto miti accabadora">
+<a href="#" class="btn">Leggi di più</a>
+<div class="nome">S'Accabadora</div>
+</div>
+
+<div class="elemento">
+<img src="immagini/domusdejanas.jpg" alt="ipotesi foto luoghi da visitare domus de janas">
+<a href="#" class="btn">Leggi di più</a>
+<div class="nome">Le Janas</div>
+</div>
+</div>
+
+<h1> Luoghi mitici </h1>
+<div class="griglia">
+<div class="elemento">
+<img src="immagini/selladeldiavolo.jpeg" alt="luoghi da visitare sella">
+<a href="https://www.sardegnaturismo.it/it/esplora/sella-del-diavolo" class="btn">Visita</a>
+<div class="nome">La Sella del Diavolo</div>
+</div>
+
+<div class="elemento">
+<img src="immagini/monteprama.jpg" alt="ipotesi luoghi da visitare cabras">
+<a href="https://monteprama.it/i-giganti/" class="btn">Visita</a>
+<div class="nome">Monte Prama</div>
+</div>
+
+<div class="elemento">
+<img src="immagini/pozzo.jpg" alt="ipotesi luogo da visitare paulilatino">
+<a href="https://www.pozzosantacristina.com/" class="btn">Visita</a>
+<div class="nome">Pozzo di Santa Cristina</div>
+</div>
+</div>
+
+<footer>
+<p><a href="#">Credits</a> | <a href="#">Licenze</a></p>
+<div class="copyright">
+<p>©️ Copyright Francesca Loddo 2025</p>
+</div>
+</footer>
+
+</body>
+</html>

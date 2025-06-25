@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Index Ichnusa a 360°</title>
+
+<meta name="DC.title" content="Fiabe e Racconti">
+  <meta name="DC.creator" content="Grazia Deledda">
+  <meta name="DC.date" content="1924">
+  <meta name="DC.subject" content="raccolta di racconti">
+  <meta name="DC.type" content="opera letteraria">
+
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+background-color: #FFFCE1;
+color: black;
+font-size: 16px;
+font-family: 'Times New Roman', serif;
+text-align: center;
+background-image: url("immagini/sfondoipotetico.png");
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+header {
+background-color: #FFFCE1;
+padding: 10px 16px;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+header img {
+max-width: 250px;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+
+.menu {
+position: relative;
+z-index: 10;
+}
+
+.menu ul {
+list-style: none;
+padding: 0;
+margin: 0;
+background-color: #F5F352;
+}
+.menu ul li {
+position: relative;
+display: inline-block;
+}
+.menu ul li a {
+color: black;
+text-decoration: none;
+padding: 15px 20px;
+display: block;
+}
+.menu ul li .submenu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #444;
+min-width: 150px;
+}
+
+.menu ul li .submenu li {
+display: block;
+}
+.menu ul li:hover .submenu {
+display: block;
+}
+
+.menu ul li .submenu a {
+color: white;
+}
+
+div.nav {
+background-color: #F5F352;
+padding: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+align-items: center;
+}
+
+div.nav a {
+color: black;
+text-decoration: none;
+font-weight: bold;
+padding: 5px 10px;
+}
+
+div.nav input {
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.slideshow-container {
+max-width: 800px;
+height: 450px;
+margin: 30px auto;
+position: relative;
+overflow: hidden;
+z-index: 1;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.slide {
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0;
+animation: fadeSlide 25s infinite;
+}
+
+.slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+.slide:nth-child(4) { animation-delay: 15s; }
+.slide:nth-child(5) { animation-delay: 20s; }
+
+@keyframes fadeSlide {
+0%, 100% { opacity: 0; }
+5%, 20% { opacity: 1; }
+25%, 100% { opacity: 0; }
+}
+
+.bottone-centro {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: rgba(255, 252, 225, 0.9);
+color: black;
+padding: 12px 24px;
+text-decoration: none;
+font-weight: bold;
+border-radius: 8px;
+border: 2px solid rgba(0,0,0,0.2);
+transition: all 0.3s ease;
+z-index: 5;
+}
+
+.bottone-centro:hover {
+background-color: rgba(255, 252, 225, 1);
+transform: translate(-50%, -50%) scale(1.05);
+}
+
+.text {
+position: absolute;
+bottom: 0;
+width: 100%;
+color: #fff;
+background: rgba(0, 0, 0, 0.6);
+padding: 15px;
+font-size: 16px;
+font-weight: bold;
+}
+
+h1{
+color: #FFFCE1 ;
+}
+
+.panel-container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px;
+margin: 40px 20px;
+background-color: #FFFCE1;
+padding: 20px;
+}
+
+.panel {
+background-color: rgba(255, 255, 255, 0.8);
+margin: 10px;
+padding: 20px;
+max-width: 300px;
+min-width: 250px;
+text-align: center;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.panel h2 {
+margin-bottom: 15px;
+color: #333;
+font-size: 18px;
+}
+
+.panel img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+object-position: center;
+border-radius: 8px;
+margin-top: 10px;
+border: 2px solid rgba(0,0,0,0.1);
+}
+
+footer {
+background-color: #FFFCE1;
+padding: 30px;
+margin-top: 40px;
+border-top: 2px solid #F5F352;
+}
+
+footer a {
+text-decoration: none;
+color: black;
+margin: 0 10px;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+.copyright {
+font-size: 0.9em;
+margin-top: 15px;
+color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+.slideshow-container {
+max-width: 95%;
+height: 300px;
+margin: 20px auto;
+}
+
+.panel-container {
+gap: 15px;
+margin: 20px 10px;
+padding: 10px;
+}
+
+.panel {
+max-width: 100%;
+min-width: auto;
+}
+
+div.nav {
+flex-direction: column;
+gap: 10px;
+}
+
+div.nav input {
+width: 200px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="immagini/Ichnusa.png" alt="logo iniziale">
+</header>
+
+<nav class="menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Sentieri</a>
+<ul class="submenu">
+<li><a href="#">Mare</a></li>
+<li><a href="#">Natura </a></li>
+<li><a href="#">Storia</a></li>
+<li><a href="#">Cucina</a></li>
+<li><a href="catalogo.html">Folklore</a></li>
+</ul>
+</li>
+<li><a href="catalogo.html">La nostra cultura</a></li>
+<li><a href="#">Chi Siamo</a></li>
+<li><a href="#">Contatti</a></li>
+<li><a href="item.html">Item</a></li>
+<input type="text" placeholder="Search..">
+</ul>
+</nav>
+
+
+
+<div class="slideshow-container">
+<div class="slide">
+<img src="immagini/balneare.png" alt="Percorso Balneare">
+<div class="text">Sentieri di Sardegna: spiagge e scogli</div>
+</div>
+<div class="slide">
+<img src="immagini/malloreddus.jpg" alt="Percorso Culinario">
+<div class="text">Sentieri di Sardegna: viaggio tra i sapori</div>
+</div>
+<div class="slide">
+<img src="immagini/folkloresardo.png" alt="Percorso Folkloristico">
+<div class="text">Sentieri di Sardegna: folklore religioso e pagano</div>
+</div>
+<div class="slide">
+<img src="immagini/naturalistico.png" alt="Percorso Naturalistico">
+<div class="text">Sentieri di Sardegna: oltre il mare</div>
+</div>
+<div class="slide">
+<img src="immagini/nuragico.png" alt="Percorso Nuragico">
+<div class="text">Sentieri di Sardegna: la nostra storia</div>
+</div>
+<a href="pagina-successiva.html" class="bottone-centro">Scopri di più</a>
+</div>
+
+<h1> Prossimamente... </h1>
+
+<div class="panel-container">
+<section class="panel">
+<h2>Sant'Efisio (1-4 maggio)</h2>
+<img src="immagini/SantEfisio.png" alt="Sant'Efisio">
+</section>
+
+<section class="panel">
+<h2>Sant'Antioco (1-6 maggio)</h2>
+<img src="immagini/SantAntioco.png" alt="Sant'Antioco">
+</section>
+
+<section class="panel">
+<h2>Cavalcata Sarda (18 maggio)</h2>
+<img src="immagini/cavalcatasarda.png" alt="Cavalcata Sarda">
+</section>
+</div>
+
+<footer>
+<p><a href="#">Credits</a> | <a href="#">Licenze</a></p>
+<div class="copyright">
+<p>©️ Copyright Francesca Loddo 2025</p>
+</div>
+</footer>
+
+</body>
+</html>

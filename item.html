@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>item finale </title>
+
+
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+background-color: #FFFCE1;
+color: black;
+font-size: 16px;
+font-family: 'Times New Roman', serif;
+text-align: center;
+background-image: url("immagini/sfondoipotetico.png");
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+
+
+header {
+background-color: #FFFCE1;
+padding: 10px 16px;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+header img {
+max-width: 250px;
+height: auto;
+}
+
+div {
+background-color: #F5F352;
+padding: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+}
+
+div a {
+color: black;
+text-decoration: none;
+font-weight: bold;
+padding: 5px 10px;
+}
+
+.menu {
+position: relative;
+z-index: 10;
+}
+
+.menu ul {
+list-style: none;
+padding: 0;
+margin: 0;
+background-color: #F5F352;
+}
+.menu ul li {
+position: relative;
+display: inline-block;
+}
+.menu ul li a {
+color: black;
+text-decoration: none;
+padding: 15px 20px;
+display: block;
+}
+.menu ul li .submenu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #444;
+}
+
+.menu ul li .submenu li {
+display: block;
+}
+.menu ul li:hover .submenu {
+display: block;
+}
+
+    .sidebar {
+      width: 200px;
+      background-color: #FFFCE1;
+      padding-top: 10px;
+      height: 35vh;
+      position: fixed;
+      left: 0;
+      top: 20;
+       z-index: 1;
+      overflow: auto;
+      margin: 0;
+      overflow-x: hidden
+    }
+
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 5px;
+      text-decoration: none;
+
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+
+
+.panel {
+background-color:transparent;
+}
+
+section {
+padding: 15px;
+text-align: left;
+background-color: #FFFCE1;
+color: black;
+width: 60%;
+margin: 0 auto;
+}
+
+.table{
+background-color: #FFFCE1;
+color: black;
+width: 100%;
+
+}
+
+
+th, td {
+border-bottom: 1px solid #ddd;
+}
+
+
+footer {
+background-color: #FFFCE1;
+padding: 20px;
+margin-top: 40px;
+}
+
+footer a {
+text-decoration: none;
+color: black;
+}
+
+.copyright {
+font-size: 0.9em;
+margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="immagini/Ichnusa.png" alt="logo iniziale">
+</header>
+
+
+
+<nav class="menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Sentieri</a>
+<ul class="submenu">
+<li><a href="#">Mare</a></li>
+<li><a href="#">Natura </a></li>
+<li><a href="#">Storia</a></li>
+<li><a href="#">Cucina</a></li>
+<li><a href="catalogo.html">Folklore</a></li>
+</ul>
+</li>
+<li><a href="catalogo.html">La nostra cultura</a></li>
+
+<li><a href="#">Chi Siamo</a></li>
+<li><a href="#">Contatti</a></li>
+<input type="text" placeholder="Search..">
+</ul>
+</nav>
+
+<div class="sidebar">
+    
+    <a href="https://www.enciclopediadelledonne.it/edd.nsf/biografie/grazia-deledda">Scopri di più su Grazia Deledda</a>
+    <a href="https://www.internetculturale.it/" target="_blank">Scopri di più sulla fonte</a>
+    <a href="filesame.xml" target="_blank">File XML</a>
+    <a href="xml&dc.xml"> File XML/DC </a>
+  </div>
+
+
+
+<div class="panel">
+<img src="immagini/copertinadeledda.jpeg">
+</div>
+
+
+
+
+<section>
+<h2> Sezione metadati dell'item </h2>
+<table>
+<tr>
+<td>Titolo</td>
+<td>Fiabe e racconti</td>
+</tr>
+<tr>
+<td>Autore</td>
+<td>Grazia Deledda</td>
+</tr>
+
+
+<tr>
+<td>Data</td>
+<td>1924</td>
+</tr>
+<tr>
+
+
+<td>Dati editoriali</td>
+<td> Rusconi, Milano</td>
+</tr>
+
+<tr>
+<td>Contributore</td>
+<td> Rombi, Bruno</td>
+</tr>
+
+<tr>
+<td>Tipo di documento</td>
+<td> Testo a stampa</td>
+</tr>
+
+<tr>
+<td> Livello Bibliografico</td>
+<td>Monografia</td>
+</tr>
+
+
+<tr>
+<td>Lingua</td>
+<td>Italiano</td>
+</tr>
+
+<tr>
+<td>Provenienza</td>
+<td>Biblioteca nazionale centrale - Firenze - IT-FI0098 ; Inventario: CF005164921 ; Segnatura: GEN.B08.5550</td>
+</tr>
+
+<tr>
+<td>Identificativo</td>
+<td>Info:sbn/TO00329940</td>
+</tr>
+
+<tr>
+<td>Agenzia</td>
+<td> Biblioteca nazionale centrale - Firenze</td>
+</tr>
+
+<tr>
+<td>Accessibilità</td>
+<td> Pubblico</td>
+</tr>
+
+
+<tr>
+<td>Completezza della digitalizzazione</td>
+<td> incompleto</td>
+</tr>
+
+
+<tr>
+<td>Teca digitale</td>
+<td> Bncf</td>
+</tr>
+
+
+<tr>
+<td>Formato digitale</td>
+<td> JPEG; TIFF</td>
+</tr>
+
+
+<tr>
+<td>Progetto</td>
+<td> <a href="http://www.bncf.firenze.sbn.it/pagina.php?id=155"> Link al catalogo digitale </a> </td>
+</tr>
+
+
+<tr>
+<td>Fonte</td>
+<td>Biblioteca Digitale Italiana</td>
+</tr>
+
+
+<tr>
+<td>Descrizione</td>
+<td>Raccolta di fiabe e racconti popolari ambientati in Sardegna, scritti da Grazia Deledda.</td>
+</tr>
+
+</table>
+</section>
+
+
+
+
+
+<footer>
+<p><a href="#">Credits</a> | <a href="#">Licenze</a></p>
+<div class="copyright">
+<p>©️ Copyright Francesca Loddo 2025</p>
+</div>
+</footer>
+
+</body>
+</html>
